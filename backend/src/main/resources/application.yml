@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: campus-food
+  datasource:
+    url: jdbc:mysql://localhost:3306/campus_food?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  # 图片上传
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 50MB
+
+server:
+  port: 8080
+
+# 文件存储路径
+app:
+  upload-dir: ./uploads

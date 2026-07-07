@@ -1,0 +1,49 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #F5F5F5; color: #333; }
+a { text-decoration: none; color: inherit; }
+
+.main-nav { position: sticky; top: 0; z-index: 100; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 56px; }
+.logo { display: flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 700; color: #FF6600; }
+.logo-icon { font-size: 28px; }
+.nav-links { display: flex; gap: 24px; align-items: center; font-size: 14px; }
+.nav-links a { color: #666; padding: 6px 0; border-bottom: 2px solid transparent; transition: all 0.2s; }
+.nav-links a:hover, .nav-links a.router-link-active { color: #FF6600; border-bottom-color: #FF6600; }
+
+.main-content { max-width: 1200px; margin: 0 auto; padding: 24px; min-height: calc(100vh - 120px); }
+
+.main-footer { text-align: center; padding: 24px; color: #999; font-size: 13px; background: #fff; border-top: 1px solid #EEE; }
+.main-footer .feedback { color: #FF6600; margin-top: 4px; cursor: pointer; }
+
+.page-title { font-size: 24px; font-weight: 700; margin-bottom: 24px; color: #333; }
+
+/* 通用卡片 */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.food-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; position: relative; }
+.food-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+.food-card:hover .fav-btn { opacity: 1; }
+.food-card-img { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 48px; }
+.food-card-img.c1 { background: #FFE8D6; } .food-card-img.c2 { background: #E8F5E9; } .food-card-img.c3 { background: #E3F2FD; } .food-card-img.c4 { background: #FFF9C4; } .food-card-img.c5 { background: #F3E5F5; } .food-card-img.c6 { background: #E0F7FA; }
+.food-card-body { padding: 14px; }
+.food-card-name { font-size: 16px; font-weight: 600; }
+.food-card-shop { font-size: 12px; color: #999; margin-top: 4px; }
+.food-card-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+.food-card-stars { color: #FFB300; font-size: 13px; }
+.food-card-price { color: #FF6600; font-size: 15px; font-weight: 600; }
+.fav-btn {
+  position: absolute; top: 10px; right: 10px;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,68,102,0.9); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; border: none; cursor: pointer;
+  opacity: 0; transition: opacity 0.2s;
+}
+.fav-btn.faved { opacity: 1; }
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .nav-inner { flex-direction: column; height: auto; padding: 12px; gap: 8px; }
+  .nav-links { gap: 12px; font-size: 12px; flex-wrap: wrap; justify-content: center; }
+  .main-content { padding: 12px; }
+  .card-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}
