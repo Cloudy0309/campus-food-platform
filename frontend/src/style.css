@@ -22,7 +22,8 @@ a { text-decoration: none; color: inherit; }
 .food-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; position: relative; }
 .food-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
 .food-card:hover .fav-btn { opacity: 1; }
-.food-card-img { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 48px; }
+.food-card-img { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 48px; overflow: hidden; }
+.food-card-img img { width: 100%; height: 100%; object-fit: contain; }
 .food-card-img.c1 { background: #FFE8D6; } .food-card-img.c2 { background: #E8F5E9; } .food-card-img.c3 { background: #E3F2FD; } .food-card-img.c4 { background: #FFF9C4; } .food-card-img.c5 { background: #F3E5F5; } .food-card-img.c6 { background: #E0F7FA; }
 .food-card-body { padding: 14px; }
 .food-card-name { font-size: 16px; font-weight: 600; }

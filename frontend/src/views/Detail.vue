@@ -86,10 +86,10 @@ async function loadShop(id) {
   } catch (e) {
     console.error('Load shop failed:', e)
     shop.value = {
-      id: 1, name: '一食堂 · 麻辣香锅', score: '4.8', price: 18,
-      canteen: '一食堂', address: '二楼东侧', hours: '10:00 - 21:00',
+      id: 1, name: '荔枝园 · 麻辣香锅', score: '4.8', price: 18,
+      canteen: '荔枝园', address: '二楼东侧', hours: '10:00 - 21:00',
       dishes: '麻辣香锅套餐,酸辣土豆丝,番茄牛腩锅,麻辣烫',
-      description: '一食堂人气最高的窗口之一，香锅自选食材丰富，荤素搭配自由，秘制酱料是老板的独门配方。每到饭点必排长队，建议错峰前往。',
+      description: '荔枝园人气最高的窗口之一，香锅自选食材丰富，荤素搭配自由，秘制酱料是老板的独门配方。每到饭点必排长队，建议错峰前往。',
       favCount: 128, commentCount: 45
     }
   }
@@ -182,7 +182,7 @@ function formatTime(t) {
 
 <style scoped>
 .detail-carousel { height: 280px; background: linear-gradient(135deg, #FFF3E0, #FFE0B2); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #BF6B04; font-size: 18px; margin-bottom: 20px; overflow: hidden; }
-.detail-img { width: 100%; height: 100%; object-fit: cover; }
+.detail-img { width: 100%; height: 100%; object-fit: contain; }
 .detail-body { position: relative; }
 .shop-header { margin-bottom: 20px; }
 .shop-name { font-size: 26px; font-weight: 700; }

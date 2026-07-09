@@ -39,7 +39,10 @@
         </div>
         <div class="card-grid">
           <div v-for="shop in shops" :key="shop.id" class="food-card" @click="$router.push(`/detail/${shop.id}`)">
-            <div class="food-card-img" :class="`c${shop.id % 6 + 1}`">🍽</div>
+            <div class="food-card-img" :class="`c${shop.id % 6 + 1}`">
+              <img v-if="shop.image" :src="shop.image" alt="" />
+              <span v-else>🍽</span>
+            </div>
             <div class="food-card-body">
               <div class="food-card-name">{{ shop.name }}</div>
               <div class="food-card-shop">{{ shop.canteen }} · {{ shop.address }}</div>
