@@ -64,8 +64,8 @@ const hotList = ref([])
 const notes = ref([])
 
 const categories = [
-  { key: '一食堂', icon: '🍚', label: '一食堂' },
-  { key: '二食堂', icon: '🍱', label: '二食堂' },
+  { key: '荔枝园', icon: '🍚', label: '荔枝园' },
+  { key: '葡萄园', icon: '🍱', label: '葡萄园' },
   { key: '校外小吃', icon: '🌭', label: '校外小吃' },
   { key: '奶茶', icon: '🧋', label: '奶茶' },
   { key: '减脂餐', icon: '🥗', label: '减脂餐' },
@@ -74,7 +74,7 @@ const categories = [
 
 const carouselData = [
   { icon: '🍲', title: '校园美食大赏', desc: '发现你身边不可错过的美味', bg: 'background: linear-gradient(135deg, #FF6B35, #FF8C42);' },
-  { icon: '🎉', title: '食堂新品上线', desc: '一食堂二楼全面升级，快来尝鲜', bg: 'background: linear-gradient(135deg, #43A047, #66BB6A);' },
+  { icon: '🎉', title: '食堂新品上线', desc: '荔枝园二楼全面升级，快来尝鲜', bg: 'background: linear-gradient(135deg, #43A047, #66BB6A);' },
   { icon: '🏆', title: '本周人气王', desc: '麻辣香锅蝉联榜首，你吃过了吗？', bg: 'background: linear-gradient(135deg, #1E88E5, #42A5F5);' },
 ]
 
@@ -91,14 +91,14 @@ async function loadData() {
   } catch (e) {
     console.error('Load home data failed:', e)
     hotList.value = [
-      { id: 1, name: '麻辣香锅', canteen: '一食堂', address: '二楼东侧', score: '4.8' },
-      { id: 2, name: '铁板牛肉饭', canteen: '二食堂', address: '一楼', score: '4.7' },
+      { id: 1, name: '麻辣香锅', canteen: '荔枝园', address: '二楼东侧', score: '4.8' },
+      { id: 2, name: '铁板牛肉饭', canteen: '葡萄园', address: '一楼', score: '4.7' },
       { id: 3, name: '酸菜鱼米线', canteen: '校外小吃', address: '小吃街', score: '4.9' },
       { id: 4, name: '杨枝甘露', canteen: '奶茶', address: '奶茶专区', score: '4.6' },
       { id: 5, name: '鸡胸肉沙拉', canteen: '减脂餐', address: '专窗', score: '4.5' },
     ]
     notes.value = [
-      { id: 1, shopId: 1, title: '二食堂新开日式拉面，绝了！', content: '汤底浓郁，叉烧厚切，人均15块', username: '吃货小王', createTime: new Date() },
+      { id: 1, shopId: 1, title: '葡萄园新开日式拉面，绝了！', content: '汤底浓郁，叉烧厚切，人均15块', username: '吃货小王', createTime: new Date() },
       { id: 2, shopId: 2, title: '校外小吃街宝藏：炸串卷饼', content: '老板秘制酱料，一口下去满满的幸福感', username: '美食猎人', createTime: new Date() },
       { id: 3, shopId: 3, title: '奶茶新品测评：芝士葡萄爆珠', content: '清爽不腻，爆珠口感超Q弹', username: '奶茶患者', createTime: new Date() },
     ]

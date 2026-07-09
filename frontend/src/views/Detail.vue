@@ -1,7 +1,8 @@
 <template>
   <div class="detail-page">
     <div class="detail-carousel">
-      <div class="detail-carousel-bg">📸 美食图集轮播（左右滑动查看）</div>
+      <img v-if="shop.image" :src="shop.image" class="detail-img" alt="店铺图片" />
+      <div v-else class="detail-carousel-bg">📸 暂无图片</div>
     </div>
 
     <div class="detail-body">
@@ -180,7 +181,8 @@ function formatTime(t) {
 </script>
 
 <style scoped>
-.detail-carousel { height: 280px; background: linear-gradient(135deg, #FFF3E0, #FFE0B2); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #BF6B04; font-size: 18px; margin-bottom: 20px; }
+.detail-carousel { height: 280px; background: linear-gradient(135deg, #FFF3E0, #FFE0B2); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #BF6B04; font-size: 18px; margin-bottom: 20px; overflow: hidden; }
+.detail-img { width: 100%; height: 100%; object-fit: cover; }
 .detail-body { position: relative; }
 .shop-header { margin-bottom: 20px; }
 .shop-name { font-size: 26px; font-weight: 700; }
