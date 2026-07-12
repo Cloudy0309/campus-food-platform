@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseURL = 'https://germproof-retool-luckiness.ngrok-free.dev/api'
+const baseURL = import.meta.env.VITE_API_BASE_URL || '/api'
 console.log('API baseURL:', baseURL)
 const api = axios.create({ baseURL, timeout: 10000 })
 
@@ -9,7 +9,6 @@ api.interceptors.request.use(config => {
   if (user) {
     config.headers['X-User-Id'] = JSON.parse(user).id
   }
-  config.headers['Bypass-Tunnel-Reminder'] = 'true'
   return config
 })
 
