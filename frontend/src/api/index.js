@@ -9,6 +9,7 @@ api.interceptors.request.use(config => {
   if (user) {
     config.headers['X-User-Id'] = JSON.parse(user).id
   }
+  config.headers['ngrok-skip-browser-warning'] = 'true'
   return config
 })
 
